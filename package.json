@@ -1,0 +1,24 @@
+{
+  "name": "point-cloud-convert",
+  "version": "0.0.3",
+  "description": "A simple JavaScript tool converting point cloud file from one format to another.",
+  "main": "point-cloud-convert.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "point cloud",
+    "format conversion",
+    "pcd",
+    "ply",
+    "asc"
+  ],
+  "author": "nightn",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "commander": "^2.20.0"
+  },
+  "bin": {
+    "point-cloud-convert": "index.js"
+  }
+}
