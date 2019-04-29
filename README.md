@@ -1,12 +1,14 @@
 # point-cloud-convert
 
-[point-cloud-convert](https://github.com/nightn/point-cloud-convert) is a simple JavaScript tool converting point cloud file from one format to another, which can use as both of JavaScript API in a browser or in Node.js and CLI.
+[point-cloud-convert](https://github.com/nightn/point-cloud-convert) is a simple JavaScript tool converting point cloud file from one format to another, which can be used as both of JavaScript API (in a browser or in Node.js) and CLI.
 
 At present, the following convertions are supported.
 
 - `pcd` <-> `ply`
 - `asc` <-> `pcd`
 - `asc` <-> `ply`
+
+You can use [CloudViewer](https://github.com/nightn/CloudViewer) to visualize point cloud files with different format.
 
 ## Installation
 
@@ -18,13 +20,13 @@ In a browser:
 
 In Node.js:
 
-If you want `point-cloud-convert` as **API** for your JavaScript project, run the code:
+If you want `point-cloud-convert` to work as **API** for your JavaScript project, run the code:
 
 ```shell
 $ npm install --save point-cloud-convert
 ```
 
-If you want `point-cloud-convert` as **CLI** to convert your local files, run the code:
+If you want `point-cloud-convert` to work as **CLI** to convert your local files, run the code:
 
 ```shell
 $ npm install --global point-cloud-convert
@@ -34,7 +36,7 @@ $ npm install --global point-cloud-convert
 
 ### (1) use point-cloud-convert as API
 
-There is only one function named `pointCloudConvert`，which takes **two parameters**, the first is input string, and the second is conversion type string, and return a output string. conversion type can be one of the following strings so far:
+There is only one function named `pointCloudConvert`，which takes **two parameters**, the first is an input string, and the second is a conversion type string, and return a output string. conversion type can be one of the following strings so far:
 
 `pcd2ply`, `pcd2asc`, `ply2pcd`, `ply2asc`, `asc2pcd`, `asc2ply` .
 
@@ -52,8 +54,7 @@ in a browser:
 in Node.js:
 
 ```js
-const pointCloudConvert = require('node_module/point-cloud-convert/point-cloud-convert.js');
-// [attention] it is not require('point-cloud-convert'), because index.js is used as CLI.
+const pointCloudConvert = require('point-cloud-convert');
 
 // inputStr has been loaded
 let conversionType = 'ply2pcd';  // convert ply to pcd
